@@ -1,15 +1,21 @@
 Template.login.events({
 	'submit .login-user': function(event) {
-		var email = event.target.email.value;
+		var username = event.target.username.value;
 		var password = event.target.password.value;
 
-		Meteor.loginWithPassword(email, password, function(err) {
+		Meteor.loginWithPassword(username, password, function(err) {
 			if (err) {
-				event.target.email.value = email;
-				event.target.email.value = password;
+				event.target.username.value = username;
+				event.target.password.value = password;
+				FlashMessages.sendError(err.reason);
 			} else {
-
+				FlashMessages.sendSuccess('You are now logged in');
+				Router.go('/admin/projects');
 			}
 		});
+
+		event.target.username.value = '';
+		event.target.password.value = '';
+		return false;
 	}
 });

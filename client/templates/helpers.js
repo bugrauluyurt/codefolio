@@ -36,3 +36,7 @@ Template.layout.events({
 		return false;
 	}
 });
+
+Template.registerHelper('formatDate', function(date) {
+	return moment(date).format('MMM Do YYYY, h:mm:ss a');
+});

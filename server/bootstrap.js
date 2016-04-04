@@ -3,7 +3,7 @@ Meteor.startup(function() {
 		Accounts.createUser({
 			username: 'admin',
 			email: 'admin@admin.com',
-			password: 'password'
+			password: 'admin'
 		});
 	}
 });

@@ -240,3 +240,9 @@ bt {
 	font-size: 40px;
 	color: #1abc9c;
 }
+
+.edit-image {
+	width:320px;
+	margin-top:10px;
+	border:1px #000000 solid;
+}

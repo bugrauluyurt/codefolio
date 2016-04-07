@@ -40,3 +40,15 @@ Template.layout.events({
 Template.registerHelper('formatDate', function(date) {
 	return moment(date).format('MMM Do YYYY, h:mm:ss a');
 });
+
+Template.registerHelper('getSiteTitle', function() {
+	return 'Codefolio';
+});
+
+Template.registerHelper('getAdminName', function() {
+	return 'Bugra Uluyurt';
+});
+
+Template.registerHelper('getAdminImage', function() {
+	return '/assets/img/user.png';
+});
